@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+    />
+    <title>Website Accessibility Tester</title>
+    <style>
+      .loader {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="sitedoctorchecker  block p-4 bg-gray-800">
+      <p class="text-4xl font-bold text-white mb-2">Site Doctor</p>
+      <p class="text-white mb-3 font-semibold">Want to check if your website has any issues? Created with Pa11ly. Created by <a href="https://bit.ly/creativeduo-all">Creative Duo LLC</a></p>
+      <form id="form" class="mt-4">
+        <div class="input-group mb-3 flex">
+          <input
+            type="url"
+            id="url"
+            class="form-control bg-gray-100 w-3/4"
+            placeholder="Enter A Valid URL"
+          />
+          <button type="submit" class="p-4 bg-blue-400 text-white">Submit</button>
+        </div>
+      </form>
+    </div>
+    
+          
+  
+       
+
+      <div class="loader text-center mt-3 ">
+        
+        <div class="spinner-border flex flex-col justify-content-center" role="status">
+          <center>
+          <div class="lds-dual-ring"></div>
+        </center>
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      
+      </div>
+
+      <style>
+        .lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #cef;
+  border-color: #cef transparent #cef transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.form-control {
+  padding: 1em;
+}
+
+      </style>
+
+      <div id="issues" class="p-2"></div>
+  
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
